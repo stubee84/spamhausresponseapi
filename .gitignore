@@ -1,0 +1,6 @@
+*.exe
+vendor/
+*.db
+__debug_bin
+.dockerignore
+spamhausresponseapi.db
