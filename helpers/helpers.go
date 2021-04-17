@@ -27,9 +27,9 @@ func ReverseUsingSeperator(str, sep string) (string, error) {
 		if ip, err := strconv.Atoi(splitStr[i]); err == nil {
 			if ip > 255 {
 				return "", fmt.Errorf("error: octect value, %d, is greater than 255", ip)
-			} else if err != nil {
-				return "", fmt.Errorf("error: could not convert string to int. %s", splitStr[i])
 			}
+		} else {
+			return "", fmt.Errorf("error: could not convert string to int. %s", splitStr[i])
 		}
 		result = result + sep + splitStr[i]
 	}
